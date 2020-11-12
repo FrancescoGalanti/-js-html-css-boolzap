@@ -75,6 +75,12 @@ body{
 
 a{
   align-self: center;
+  font-size: 10px;
+}
+
+li{
+  align-self: center;
+  list-style: none;
 }
 
 
@@ -115,7 +121,7 @@ i.fas.fa-bell-slash{
 
 .description-icon{
   color: black;
-  font-size: 12px;
+  font-size: 14px;
   align-self: center;
 }
 
