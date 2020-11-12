@@ -21,6 +21,46 @@ body{
     );
 }
 
+
+/* DESKOTOP FIRST */
+
+
+/* UTILITIES */
+
+/* LAYOUT-LIST */
+
+.list-user{
+  display: flex;
+  padding: 10px;
+}
+
+.list-font{
+  padding-top: 20px;
+  display: flex;
+  padding-right: 15px;
+  filter: opacity(.2);
+}
+
+/* LAYOUT-IMG */
+
+.img-user {
+  width: 12%;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.object-name{
+  align-self: center;
+}
+
+.flex{
+  display: flex;
+}
+
+
+
+
+
 /* layout */
 
 .container{
@@ -34,7 +74,10 @@ body{
 .side{
  flex-basis: 35%;
  background: #ccc;
+ display: flex;
 }
+
+
 
 .content{
  flex-basis: 65%;

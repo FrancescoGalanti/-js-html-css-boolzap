@@ -18,7 +18,37 @@
     <div id="app" class="container">
 
       <!-- aside bar that manages nicknames and images with an interpolation of the dot notation array-->
-      <aside class="side">sidebar</aside>
+      <aside class="side">
+        <!-- Img with user name extrapolate by an array of object -->
+
+          <div class="nav-right">
+            <ul class="flex">
+              <!-- list with dinamic value managed by vue -->
+              <li class="list-user" >
+
+                 <!-- image taken from the img folder with the prefix taken from the user object in the avatar key "_io" plus its name "jpg", using the dot notation, making dynamic the image change and its connection with the "user" object array. -->
+                <img :src="'./img/avatar'+ user.avatar +'.jpg'" class="img-user">
+
+                  <!-- Object from user.name -->
+                <p class="object-name">{{user.name}}</p>
+              </li>
+            </ul>
+          </div>
+          <!-- list of font awesome -->
+          <div class="nav-left">
+            <ul class="flex">
+              <li class="list-font">
+                <i class="fas fa-circle-notch"></i>
+              </li>
+              <li class="list-font">
+                <i class="fas fa-comment-alt"></i>
+              </li>
+              <li class="list-font">
+                <i class="fas fa-ellipsis-v"></i>
+              </li>
+            </ul>
+          </div>
+     </aside>
 
       <!-- messages handled by vue within an object array -->
       <main class="content">
