@@ -41,6 +41,13 @@ body{
   filter: opacity(.2);
 }
 
+.list-icon{
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-left: 15px;
+ flex-direction: column;
+}
+
 /* LAYOUT-IMG */
 
 .img-user {
@@ -58,6 +65,18 @@ body{
 }
 
 
+/* background */
+
+.background-color-grey{
+  background-color: #8080805e;
+}
+
+/* TYPO */
+
+a{
+  align-self: center;
+}
+
 
 
 
@@ -73,9 +92,33 @@ body{
 
 .side{
  flex-basis: 35%;
- background: #ccc;
- display: flex;
 }
+
+.news{
+  background-color:  #00bcd49e;
+}
+
+.icon-style{
+  background-color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i.fas.fa-bell-slash{
+  font-size: 20px;
+  color: #00bcd49e;;
+}
+
+.description-icon{
+  color: black;
+  font-size: 12px;
+  align-self: center;
+}
+
 
 
 
