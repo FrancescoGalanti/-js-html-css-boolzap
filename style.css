@@ -106,7 +106,7 @@ body{
 /* background */
 
 .background-color-grey{
-  background-color: #8080805e;
+  background-color: #8080803d;
 }
 
 /* TYPO */
@@ -127,6 +127,16 @@ i{
 
 p{
   align-items: center;
+}
+
+
+/* font */
+
+.font-style{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  filter: opacity(.2);
 }
 
 
@@ -171,12 +181,7 @@ i.fas.fa-bell-slash{
   align-self: center;
 }
 
-i.fas.fa-search{
-  padding-top: 15px;
-  padding-bottom: 10px;
-  padding-left: 25px;
-  filter: opacity(.2);
-}
+
 
 .input-style{
   border: 0;
@@ -191,6 +196,8 @@ i.fas.fa-search{
  display: flex;
  flex-direction: column;
 }
+
+
 
 .style-acess{
   color: grey;
@@ -212,4 +219,5 @@ i.fas.fa-search{
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
+  background-color: #80808061;
 }
