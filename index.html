@@ -44,7 +44,7 @@
               <li class="list-font">
                 <i class="fas fa-comment-alt"></i>
               </li>
-              <li class="list-font">
+              <li  class="list-font">
                   <i class="fas fa-ellipsis-v img-user"></i>
               </li>
             </ul>
@@ -77,10 +77,16 @@
        </section>
         <!-- Fourth-part of side -->
        <section>
-          <ul class="flex">
-            <li class="list-user">
-               <img src="" alt="" class="img-user">
-               <p class="object-name"></p>
+         <!-- List-user -->
+          <ul class="flex flex-direction-column" >
+
+            <!-- loop of an array of objects to extrapolate contacts from contacts (the array).
+            a   fter having extrapolated the contact i combine the root of img with a notation dote "contact.avatar" plus the name "jpg" -->
+            <li v-for="contact in contacts" class="list-user">
+              <!--the current image printed on html with the method previously described -->             
+               <img :src="'./img/avatar'+ contact.avatar +'.jpg'"  alt="" class="img-user">
+               <!-- loop of an array of objects to extrapolate contact from contacts (the array) to print the name. -->
+               <p class="object-name padding-left-30">{{contact.name}}</p>
             </li>
           </ul>
        </section>
