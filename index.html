@@ -14,47 +14,24 @@
 <body>
 
 
-    <!--a container that inside contains a slider. -->
-    <div id="app">
-      <!-- a slider  that inside contains  images with dynamic interaction managed by vue -->
-       <div class="slider"
-       @mouseenter="stopLoop"
-       @mouseleave="startloop"
-       @keyup.arrow-left="prevImages"
-       @keyup.arrow-right="nextImages"
-       tabindex="0">
+    <!--a container that managed user image and messages generate by vue -->
+    <div id="app" class="container">
 
-          <!-- Font that has an event managed by vue -->
-          <div class="prev" @click="prevImages">
-            <!-- click event managed by vue which changes the current image with the previous one -->
-            <i class="fas fa-arrow-left"></i>
-          </div>
+      <!-- aside bar that manages nicknames and images with an interpolation of the dot notation array-->
+      <aside class="side">sidebar</aside>
 
-          <!-- An array of images handled by an event created in vue.  -->
-          <div class="images">
-            <img :src="images[indexImg]" alt="">
-          </div>
-          <!-- Font that has an event managed by vue -->
-          <div class="next" @click="nextImages">
-               <!-- click event managed by vue  which changes the current image with the next one -->
-            <i class="fas fa-arrow-right"></i>
-          </div>
-          <!-- navigation bar that allows you to change the image based on its array's index -->
-          <div class="nav">
-            <!-- default font -->
-            <!-- <i class="fas fa-circle active"></i>
-            <i class="fas fa-circle "></i>
-            <i class="fas fa-circle "></i>
-            <i class="fas fa-circle "></i> -->
+      <!-- messages handled by vue within an object array -->
+      <main class="content">
+         <!--header with a  search input managed by vue -->
+         <section class="cont-header">header</section>
+         <!--main with messages generate inside an array of object that are managed by vue -->
+         <section class="cont-main">main</section>
+         <!-- footer with an input that generate new message -->
+         <section class="cont-footer">footer</section>
+      </main>
 
-
-            <!-- iterpolation with font in order to print the fonts in the dom that macthing the right image with the right array index  -->
-            <i v-for="(image,index) in images"
-            :class="['fas fa-circle', index == indexImg ? 'active' : '' ]"
-            @click="machtIndexImages(index)"></i>
-          </div>
-       </div>
     </div>
+
 
 
 
