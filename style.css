@@ -63,7 +63,7 @@ body{
 }
 
 .img-user-content{
-  width: 6.5%;
+  width: 6%;
 }
 
 .object-name{
@@ -127,6 +127,7 @@ i{
 
 p{
   align-items: center;
+  font-size: 13px;
 }
 
 
@@ -177,7 +178,7 @@ i.fas.fa-bell-slash{
 
 .description-icon{
   color: black;
-  font-size: 14px;
+  font-size: 12px;
   align-self: center;
 }
 
@@ -209,15 +210,49 @@ i.fas.fa-bell-slash{
   justify-content: space-between;
 }
 
-
-
-
-
-
-
 .cont-main{
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
   background-color: #80808061;
+}
+
+.cont-footer{
+  display: flex;
+  flex-basis: 45px;
+  background-color: #8080802b;
+}
+
+
+.sidebar-left{
+  display: flex;
+  flex-basis: 10%;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sidebar-center{
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-footer{
+  flex-basis: 90%;
+  width: 100%;
+  height: 80%;
+  margin-top: 5px;
+  border: none;
+  padding-left: 10px;
+}
+
+
+.sidebar-right{
+  flex-basis: 10%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  filter: opacity(.5);
 }

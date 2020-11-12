@@ -71,6 +71,7 @@
              <i class="fas fa-search font-style"></i>
            </li>
            <li class="flex">
+             <!-- Input value managed by vue -->
              <input class="input-style" type="text" name="" value="" placeholder="search user">
            </li>
          </ul>
@@ -97,11 +98,16 @@
          <!--header with a  search input managed by vue -->
          <section class="cont-header background-color-grey">
            <div class="nav-right-content">
+             <!-- Condition to print only one element in the array of objects -->
              <ul v-if="contacts.length = 1"  class="flex">
+               <!-- loop of an array of objects to extrapolate contacts from contacts (the array).
+               a   fter having extrapolated the contact i combine the root of img with a notation dote "contact.avatar" plus the name "jpg" -->
                 <li v-for="(contact,index) in contacts" class="list-user" >
+                    <!--the current image printed on html with the method previously described -->
                   <img class="img-user img-user-content"  :src="'./img/avatar'+ contact.avatar +'.jpg'" alt="">
                   <ul class="flex flex-direction-column justify-content-center padding-left-20">
                     <li class="flex flex-direction-column align-self-center">
+                        <!-- loop of an array of objects to extrapolate contact from contacts (the array) to print the name. -->
                        <p>{{contact.name}}</p>
                     </li>
                     <li>
@@ -128,7 +134,20 @@
          <!--main with messages generate inside an array of object that are managed by vue -->
          <section class="cont-main">main</section>
          <!-- footer with an input that generate new message -->
-         <section class="cont-footer">footer</section>
+         <section class="cont-footer">
+           <!-- Icon-sidebar-left -->
+          <div class="sidebar-left">
+             <i class="far fa-smile"></i>
+          </div>
+
+          <div class="sidebar-center">
+            <input class="input-footer" type="text" name="" value="" placeholder="scrivi un messagio">
+          </div>
+
+          <div class="sidebar-right">
+            <i class="fas fa-microphone"></i>
+          </div>
+         </section>
       </main>
 
     </div>
