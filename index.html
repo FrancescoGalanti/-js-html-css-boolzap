@@ -95,20 +95,33 @@
       <!-- messages handled by vue within an object array -->
       <main class="content">
          <!--header with a  search input managed by vue -->
-         <section class="cont-header">
-           <div class="nav-right">
+         <section class="cont-header background-color-grey">
+           <div class="nav-right-content">
              <ul v-if="contacts.length = 1"  class="flex">
                 <li v-for="(contact,index) in contacts" class="list-user" >
                   <img class="img-user img-user-content"  :src="'./img/avatar'+ contact.avatar +'.jpg'" alt="">
-                  <ul class="flex flex-direction-column justify-content-center">
-                    <li class="flex flex-direction-column">
+                  <ul class="flex flex-direction-column justify-content-center padding-left-20">
+                    <li class="flex flex-direction-column align-self-center">
                        <p>{{contact.name}}</p>
                     </li>
                     <li>
-                       <p>Ultimo accesso oggi alle 10.35</p>
+                       <p class="style-acess">Ultimo accesso oggi alle 10.35</p>
                     </li>
                   </ul>
                 </li>
+             </ul>
+           </div>
+           <div class="nav-left-content">
+             <ul class="flex">
+               <li class="list-font">
+                 <i class="fas fa-circle-notch"></i>
+               </li>
+               <li class="list-font">
+                 <i class="fas fa-comment-alt"></i>
+               </li>
+               <li  class="list-font">
+                   <i class="fas fa-ellipsis-v img-user"></i>
+               </li>
              </ul>
            </div>
          </section>

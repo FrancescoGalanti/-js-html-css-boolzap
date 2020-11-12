@@ -63,7 +63,7 @@ body{
 }
 
 .img-user-content{
-  width: 9%;
+  width: 6.5%;
 }
 
 .object-name{
@@ -82,13 +82,19 @@ body{
   padding-left: 30px;
 }
 
+.padding-left-20{
+  padding-left: 20px;
+}
+
 .justify-content-center{
   justify-content: center;
 }
 
-.align-items-start{
- align-self: flex-start;
+.align-self-center{
+  align-self: flex-start;
 }
+
+
 
 /* hoover */
 
@@ -182,17 +188,23 @@ i.fas.fa-search{
 
 .content{
  flex-basis: 65%;
- background: #aaa;
  display: flex;
  flex-direction: column;
 }
 
-
-.cont-header,
-.cont-footer{
-
-  background: rgba(255,0,0.5);
+.style-acess{
+  color: grey;
 }
+
+
+.cont-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
 
 
 
