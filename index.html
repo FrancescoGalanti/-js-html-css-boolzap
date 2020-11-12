@@ -82,8 +82,8 @@
 
             <!-- loop of an array of objects to extrapolate contacts from contacts (the array).
             a   fter having extrapolated the contact i combine the root of img with a notation dote "contact.avatar" plus the name "jpg" -->
-            <li v-for="contact in contacts" class="list-user">
-              <!--the current image printed on html with the method previously described -->             
+            <li v-for="contact in contacts" class="list-user hoover">
+              <!--the current image printed on html with the method previously described -->
                <img :src="'./img/avatar'+ contact.avatar +'.jpg'"  alt="" class="img-user">
                <!-- loop of an array of objects to extrapolate contact from contacts (the array) to print the name. -->
                <p class="object-name padding-left-30">{{contact.name}}</p>
@@ -95,7 +95,15 @@
       <!-- messages handled by vue within an object array -->
       <main class="content">
          <!--header with a  search input managed by vue -->
-         <section class="cont-header">header</section>
+         <section class="cont-header">
+           <div class="nav-right">
+             <ul class="flex">
+                <li v-for="(contact, index) in contacts" >
+                  <img class="img" :src="'./images/avatar'+ contact.avatar.index[1] +'.jpg'" alt="">
+                </li>
+             </ul>
+           </div>
+         </section>
          <!--main with messages generate inside an array of object that are managed by vue -->
          <section class="cont-main">main</section>
          <!-- footer with an input that generate new message -->
