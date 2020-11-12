@@ -62,6 +62,10 @@ body{
   align-self: center;
 }
 
+.img-user-content{
+  width: 9%;
+}
+
 .object-name{
   align-self: center;
 }
@@ -76,6 +80,14 @@ body{
 
 .padding-left-30{
   padding-left: 30px;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.align-items-start{
+ align-self: flex-start;
 }
 
 /* hoover */
@@ -105,6 +117,10 @@ li{
 
 i{
   cursor: pointer;
+}
+
+p{
+  align-items: center;
 }
 
 
@@ -174,7 +190,7 @@ i.fas.fa-search{
 
 .cont-header,
 .cont-footer{
-  padding: 20px;
+
   background: rgba(255,0,0.5);
 }
 

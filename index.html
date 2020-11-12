@@ -97,9 +97,17 @@
          <!--header with a  search input managed by vue -->
          <section class="cont-header">
            <div class="nav-right">
-             <ul class="flex">
-                <li v-for="(contact, index) in contacts" >
-                  <img class="img" :src="'./images/avatar'+ contact.avatar.index[1] +'.jpg'" alt="">
+             <ul v-if="contacts.length = 1"  class="flex">
+                <li v-for="(contact,index) in contacts" class="list-user" >
+                  <img class="img-user img-user-content"  :src="'./img/avatar'+ contact.avatar +'.jpg'" alt="">
+                  <ul class="flex flex-direction-column justify-content-center">
+                    <li class="flex flex-direction-column">
+                       <p>{{contact.name}}</p>
+                    </li>
+                    <li>
+                       <p>Ultimo accesso oggi alle 10.35</p>
+                    </li>
+                  </ul>
                 </li>
              </ul>
            </div>
