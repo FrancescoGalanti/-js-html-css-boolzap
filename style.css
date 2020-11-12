@@ -27,6 +27,12 @@ body{
 
 /* UTILITIES */
 
+/* Margin */
+
+.margin-right-40px-lg{
+  margin-right: 40px;
+}
+
 /* LAYOUT-LIST */
 
 .list-user{
@@ -123,6 +129,18 @@ i.fas.fa-bell-slash{
   color: black;
   font-size: 14px;
   align-self: center;
+}
+
+i.fas.fa-search{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  filter: opacity(.2);
+}
+
+.input-style{
+  border: 0;
+  filter: opacity(.2);
 }
 
 
