@@ -141,6 +141,13 @@ p{
 }
 
 
+/* reset */
+
+.reset-opacity{
+  filter: opacity(1);
+}
+
+
 
 
 /* layout */
@@ -157,8 +164,18 @@ p{
  flex-basis: 35%;
 }
 
+.section-first{
+  height: 54px;
+}
+
 .news{
   background-color:  #00bcd49e;
+}
+
+.User-contact{
+  flex-grow: 1;
+  display: flex;
+  overflow-x: auto;
 }
 
 .icon-style{
@@ -208,6 +225,7 @@ i.fas.fa-bell-slash{
 .cont-header{
   display: flex;
   justify-content: space-between;
+  height: 54px;
 }
 
 .cont-main{
