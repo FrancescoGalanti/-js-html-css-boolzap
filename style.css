@@ -106,6 +106,8 @@ body{
 }
 
 
+
+
 /* background */
 
 .background-color-grey{
@@ -131,6 +133,10 @@ i{
 p{
   align-items: center;
   font-size: 13px;
+}
+
+li.active{
+  background: grey;
 }
 
 

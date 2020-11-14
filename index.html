@@ -21,7 +21,7 @@
       <aside class="side">
         <!-- Img with user name extrapolate by an array of object -->
         <section class="flex background-color-grey section-first">
-
+          <!-- User-bar -->
           <div class="nav-right">
             <ul class="flex">
               <!-- list with dinamic value managed by vue -->
@@ -35,7 +35,7 @@
               </li>
             </ul>
           </div>
-          <!-- list of font awesome -->
+          <!-- list of font awesome  -->
           <div class="nav-left">
             <ul class="flex">
               <li class="list-font">
@@ -50,8 +50,9 @@
             </ul>
           </div>
         </section>
-        <!-- Second-part of side -->
-        <div class="news">
+
+        <!-- notification -->
+        <section class="news">
           <ul class="flex">
             <li class="list-font list-icon reset-opacity">
               <div class="icon-style">
@@ -63,8 +64,8 @@
                  </li>
             </li>
           </ul>
-       </div>
-       <!-- Third-part of side -->
+       </section>
+       <!-- Searching news and notication-->
        <section class="input-search">
          <ul class="flex justify-content-space-between">
            <li class="flex margin-right-20px-lg">
@@ -76,14 +77,13 @@
            </li>
          </ul>
        </section>
-        <!-- Fourth-part of side -->
+        <!-- User-contact -->
        <section class="User-contact">
          <!-- List-user -->
           <ul class="flex flex-direction-column" >
 
-            <!-- loop of an array of objects to extrapolate contacts from contacts (the array).
-            a   fter having extrapolated the contact i combine the root of img with a notation dote "contact.avatar" plus the name "jpg" -->
-            <li v-for="contact in contacts" class="list-user hoover">
+            <!--in array loop I extrapolated the elements and the index.  then I made a ternary function to determine if lindexe is equal to the control variable am to add the ctive class. I created a click function to change the active class. -->
+            <li v-for="(contact, index) in contacts" class="list-user hoover " :class="indexId == index ? 'active' : ''"  @click="openChat(index)">
               <!--the current image printed on html with the method previously described -->
                <img :src="'./img/avatar'+ contact.avatar +'.jpg'"  alt="" class="img-user">
                <!-- loop of an array of objects to extrapolate contact from contacts (the array) to print the name. -->
@@ -94,21 +94,21 @@
      </aside>
 
       <!-- messages handled by vue within an object array -->
+      <!-- User in contact -->
       <main class="content">
          <!--header with a  search input managed by vue -->
          <section class="cont-header background-color-grey">
            <div class="nav-right-content">
              <!-- Condition to print only one element in the array of objects -->
-             <ul v-if="contacts.length = 1"  class="flex">
-               <!-- loop of an array of objects to extrapolate contacts from contacts (the array).
-               a   fter having extrapolated the contact i combine the root of img with a notation dote "contact.avatar" plus the name "jpg" -->
-                <li v-for="(contact,index) in contacts" class="list-user" >
-                    <!--the current image printed on html with the method previously described -->
-                  <img class="img-user img-user-content"  :src="'./img/avatar'+ contact.avatar +'.jpg'" alt="">
+             <ul  class="flex">
+
+                <li class="list-user" >
+                    <!--the current image printed with dot notation 'the address of the image + reference array [the control variable] + avatar + the format'-->
+                  <img class="img-user img-user-content"  :src="'./img/avatar'+ contacts[indexId].avatar +'.jpg'" alt="">
                   <ul class="flex flex-direction-column justify-content-center padding-left-20">
                     <li class="flex flex-direction-column align-self-center">
-                        <!-- loop of an array of objects to extrapolate contact from contacts (the array) to print the name. -->
-                       <p>{{contact.name}}</p>
+                        <!--the printed name that corresponds to the reference array connected to the function described in section four of side with the control variable -->
+                       <p>{{contacts[indexId].name}}</p>
                     </li>
                     <li>
                        <p class="style-acess">Ultimo accesso oggi alle 10.35</p>
@@ -131,6 +131,7 @@
                </li>
              </ul>
            </div>
+
          </section>
          <!--main with messages generate inside an array of object that are managed by vue -->
          <section class="cont-main">main</section>
