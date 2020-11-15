@@ -135,6 +135,8 @@ p{
   font-size: 13px;
 }
 
+/* Class managed by a ternary function in Javascript */
+
 li.active{
   background: grey;
 }
@@ -250,10 +252,89 @@ i.fas.fa-bell-slash{
 
 .cont-main{
   flex-grow: 1;
-  padding: 20px;
+  background-image: url(img/mine.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  padding: 30px 50px;
   overflow-y: auto;
-  background-color: #80808061;
 }
+
+
+/* Beginning of classes managed by a ternary functionin javascriptt */
+
+.row-sent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.row-received {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.box {
+  width: 400px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+}
+
+.box i {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #ccc;
+  font-size: 16px;
+}
+
+.box:hover i {
+  display: block;
+}
+
+.box small {
+  color: #ccc;
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.sent {
+    background: #cbfbb3;
+}
+
+.sent::before {
+  content:'';
+  position:absolute;
+  bottom: 10px;
+  right:-4px;
+  width:8px;
+  height: 8px;
+  background: #cbfbb3;
+  transform: rotate(45deg);
+}
+
+.received {
+  background: #fff;
+}
+
+.received::before {
+  content:'';
+  position:absolute;
+  bottom: 10px;
+  left:-4px;
+  width:8px;
+  height: 8px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+/* End of classes handled by ternary functions in javascript */
 
 .cont-footer{
   display: flex;

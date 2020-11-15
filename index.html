@@ -134,7 +134,19 @@
 
          </section>
          <!--main with messages generate inside an array of object that are managed by vue -->
-         <section class="cont-main">main</section>
+         <section class="cont-main">
+           <!--  loop of an array to transpose the index and the array itself.
+            The extrapolated array plus [the control variable] to extrapolate the exact message connected to the user and the image.
+             Using the ternary function to determine who the row-sent or row-received class belongs to, with the message.status object. -->
+           <div  v-for="(message, index) in contacts[indexId].messages" :class="message.status == 'sent' ? 'row-sent' : 'row-received'">
+              <!--use of the ternary function to determine who the sent or received class belongs to, thanks to the "message.status" element  -->
+              <div class="box" :class="message.status == 'sent' ? 'sent' : 'received'">
+                  <!-- stamping the element plus its value. "element.key". -->
+                  <p>{{message.message}}<small>{{message.date}}</small></p>
+                      <i class="fas fa-chevron-down"></i>
+                  </div>
+           </div>
+         </section>
          <!-- footer with an input that generate new message -->
          <section class="cont-footer">
            <!-- Icon-sidebar-left -->
