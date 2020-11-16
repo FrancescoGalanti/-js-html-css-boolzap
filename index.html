@@ -156,7 +156,8 @@
           </div>
           <!-- Inp -->
           <div class="sidebar-center">
-            <input class="input-footer" type="text" name="" value="" placeholder="scrivi un messagio">
+            <!-- input connected to the array managed by vue contacts that push a new message with the keyup method and update the date with Date.js with an "addchat" function and the dynamic value "newchat" -->
+            <input class="input-footer" type="text" name="" value="" placeholder="scrivi un messagio" v-model="newchat" @keyup.enter="addchat">
           </div>
           <!-- microphone -->
           <div class="sidebar-right">
