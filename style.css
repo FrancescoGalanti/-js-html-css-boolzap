@@ -284,6 +284,19 @@ i.fas.fa-bell-slash{
   position: relative;
 }
 
+.box i {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.box:hover i {
+    display: block;
+}
+
 .box small {
   color: #ccc;
   display: block;
