@@ -97,6 +97,7 @@ var app = new Vue({
         ],
         // control variable //
         indexId: "0",
+        newchat: "",
     },
     // methods
     methods: {
@@ -104,13 +105,13 @@ var app = new Vue({
         Setactivecontact(index) {
          // comparing the control variable to the array's index//
            this.indexId = index;
-        }
-
+        },
+        //  Call back function that add a new item in the list //
         addchat(){
       // pushing new chat list in the array //
       // validation//
       if(this.newchat.trim() !== ""){
-        this.contacts.push(this.newitem)
+        this.contacts.push(this.newchat)
         // clearing the input //
         this.newchat = "";
       };
