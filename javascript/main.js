@@ -105,5 +105,15 @@ var app = new Vue({
          // comparing the control variable to the array's index//
            this.indexId = index;
         }
+
+        addchat(){
+      // pushing new chat list in the array //
+      // validation//
+      if(this.newchat.trim() !== ""){
+        this.contacts.push(this.newitem)
+        // clearing the input //
+        this.newchat = "";
+      };
+    },
     }
 });
