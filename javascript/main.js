@@ -108,13 +108,33 @@ var app = new Vue({
         },
         //  Call back function that add a new item in the list //
         addchat(){
-      // pushing new chat list in the array //
-      // validation//
-      if(this.newchat.trim() !== ""){
-        this.contacts.push(this.newchat)
-        // clearing the input //
-        this.newchat = "";
-      };
-    },
+          // pushing new chat list in the array //
+          // validation//
+          if(this.newchat.trim() !== ""){
+             // array mached with the control variable to push the newchat in the esact contact.name and messages//
+             this.contacts[this.indexId].messages.push({
+                    // Format date made by Data,js //
+                    date: dayjs().format('DD/MM/YY HH:mm:ss'),
+                    // Create a new messge.value with previously the function previously described //
+                    message: this.newchat.trim(),
+                    // assignment of the object value to assign the right class in css //
+                    status: 'sent'
+                });
+                // clearing the input //
+                this.newchat = "";
+                // Creation of creation of an asynchronous function that already existing //
+                setTimeout(this.newAnsw(), 3000);
+              };
+         },
+         newAnsw() {
+           // array mached with the control variable to push the newchat in the esact contact.name and messages//
+           this.contacts[this.indexId].messages.push({
+              // Format date made by Data,js //
+               date: dayjs().format('DD/MM/YY HH:mm:ss'),
+               // Create a new messge.value with previously the function previously described //
+               message: 'Grande amico!',
+              // assignment of the object value to assign the right class in css //
+               status: 'received'});
+       }
     }
 });
