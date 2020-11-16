@@ -140,10 +140,11 @@
              Using the ternary function to determine who the row-sent or row-received class belongs to, with the message.status object. -->
            <div  v-for="message in contacts[indexId].messages" :class="message.status == 'sent' ? 'row-sent' : 'row-received'">
               <!--use of the ternary function to determine who the sent or received class belongs to, thanks to the "message.status" element  -->
-              <div class="box" :class="message.status == 'sent' ? 'sent' : 'received'">
+
+              <!--binding the class 'message' plus message, status which determines its sent or received status  -->
+              <div class="box" :class="['message', message.status]">
                   <!-- stamping the element plus its value. "element.key". -->
                   <p>{{message.message}}<small>{{message.date}}</small></p>
-                    
              </div>
            </div>
          </section>
@@ -171,8 +172,9 @@
 
 
 
-    <!-- JS  -->
-
+    <!-- Day.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.6/dayjs.min.js"></script>
+    <!-- Main js -->
     <script src="./javascript/main.js"></script>
 </body>
 </html>
