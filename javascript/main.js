@@ -101,7 +101,7 @@ var app = new Vue({
     // methods
     methods: {
         // Call back function that use the arrays index and the controll variable to match the user with the same message inside the array
-        openChat(index) {
+        Setactivecontact(index) {
          // comparing the control variable to the array's index//
            this.indexId = index;
         }

@@ -83,7 +83,7 @@
           <ul class="flex flex-direction-column" >
 
             <!--in array loop I extrapolated the elements and the index.  then I made a ternary function to determine if lindexe is equal to the control variable am to add the ctive class. I created a click function to change the active class. -->
-            <li v-for="(contact, index) in contacts" class="list-user hoover " :class="indexId == index ? 'active' : ''"  @click="openChat(index)">
+            <li v-for="(contact, index) in contacts" class="list-user hoover " :class="[indexId == index ? 'active' : '']"  @click="Setactivecontact(index)">
               <!--the current image printed on html with the method previously described -->
                <img :src="'./img/avatar'+ contact.avatar +'.jpg'"  alt="" class="img-user">
                <!-- loop of an array of objects to extrapolate contact from contacts (the array) to print the name. -->
@@ -138,7 +138,7 @@
            <!--  loop of an array to transpose the index and the array itself.
             The extrapolated array plus [the control variable] to extrapolate the exact message connected to the user and the image.
              Using the ternary function to determine who the row-sent or row-received class belongs to, with the message.status object. -->
-           <div  v-for="(message, index) in contacts[indexId].messages" :class="message.status == 'sent' ? 'row-sent' : 'row-received'">
+           <div  v-for="message in contacts[indexId].messages" :class="message.status == 'sent' ? 'row-sent' : 'row-received'">
               <!--use of the ternary function to determine who the sent or received class belongs to, thanks to the "message.status" element  -->
               <div class="box" :class="message.status == 'sent' ? 'sent' : 'received'">
                   <!-- stamping the element plus its value. "element.key". -->

@@ -308,31 +308,13 @@ i.fas.fa-bell-slash{
     background: #cbfbb3;
 }
 
-.sent::before {
-  content:'';
-  position:absolute;
-  bottom: 10px;
-  right:-4px;
-  width:8px;
-  height: 8px;
-  background: #cbfbb3;
-  transform: rotate(45deg);
-}
+
 
 .received {
   background: #fff;
 }
 
-.received::before {
-  content:'';
-  position:absolute;
-  bottom: 10px;
-  left:-4px;
-  width:8px;
-  height: 8px;
-  background: #fff;
-  transform: rotate(45deg);
-}
+
 
 /* End of classes handled by ternary functions in javascript */
 
