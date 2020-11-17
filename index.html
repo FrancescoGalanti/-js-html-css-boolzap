@@ -136,7 +136,7 @@
 
          </section>
          <!--main with messages generate inside an array of object that are managed by vue -->
-         <section class="cont-main">
+         <section class="cont-main padding-reset-1451px-large padding-reset-1351px-large padding-reset-1251px-large padding-reset-1151px-large">
            <!--  loop of an array to transpose the index and the array itself.
             The extrapolated array plus [the control variable] to extrapolate the exact message connected to the user and the image.
              Using the ternary function to determine who the row-sent or row-received class belongs to, with the message.status object. -->
@@ -144,9 +144,9 @@
               <!--use of the ternary function to determine who the sent or received class belongs to, thanks to the "message.status" element  -->
 
               <!--binding the class 'message' plus message, status which determines its sent or received status  -->
-              <div class="container-message" :class="['message', message.status]">
+              <div class="container-message width-reset-message-1251px" :class="['message', message.status]">
                   <!-- stamping the element plus its value. "element.key". -->
-                  <p class="message-text">{{message.message}}</p>
+                  <p class="message-text font-style-1251px">{{message.message}}</p>
                   <div class="small-date">{{message.date}}</small>
                   <i class="fas fa-chevron-down"></i>
              </div>

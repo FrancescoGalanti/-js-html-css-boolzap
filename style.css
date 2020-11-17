@@ -445,3 +445,49 @@ i.fas.fa-microphone{
 i.fas.fa-microphone:hover{
   filter: opacity(1);
 }
+
+
+
+
+/* media */
+
+@media only screen and (max-width: 1451px) {
+  /* reset paddiing */
+
+  .padding-reset-1451px-large{
+    padding: 30px 30px;
+  }
+}
+
+
+@media only screen and (max-width: 1351px) {
+  /* reset paddiing */
+
+  .padding-reset-1351px-large{
+    padding: 30px 10px;
+  }
+}
+
+@media only screen and (max-width: 1251px) {
+  /* reset paddiing */
+
+  .padding-reset-1251px-large{
+    padding: 30px 30px;
+  }
+   /* reset font */
+  .font-style-1251px{
+    font-size: 10px;
+  }
+
+  /* reset with messages */
+
+  .width-reset-message-1251px{
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1151px) {
+  .padding-reset-1151px-large{
+    padding: 30px 10px;
+  }
+}
