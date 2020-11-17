@@ -280,23 +280,25 @@ i.fas.fa-bell-slash{
 .row-right {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   margin: 8px 0;
 }
 
 .row-left {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   margin: 8px 0;
 }
 
 .container-message {
   width: 300px;
-  padding: 10px 20px;
+  padding-left: 10px;
   border-radius: 5px;
   text-align: left;
   position: relative;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
 }
 
  i.fas.fa-chevron-down {
@@ -321,13 +323,21 @@ i.fas.fa-chevron-down:hover{
   display: block;
 }
 
+.message-text{
+  justify-content: center;
+}
+
 .small-date {
   color: #ccc;
   display: block;
   text-align: right;
   margin-top: 5px;
-  font-size: 10px;
+  font-size: 7px;
+  align-self: flex-end;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
+
 
 .sent {
     background: #cbfbb3;

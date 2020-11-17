@@ -144,7 +144,8 @@
               <!--binding the class 'message' plus message, status which determines its sent or received status  -->
               <div class="container-message" :class="['message', message.status]">
                   <!-- stamping the element plus its value. "element.key". -->
-                  <p>{{message.message}}<div class="small-date">{{message.date}}</small></p>
+                  <p class="message-text">{{message.message}}</p>
+                  <div class="small-date">{{message.date}}</small>
                   <i class="fas fa-chevron-down"></i>
              </div>
            </div>
