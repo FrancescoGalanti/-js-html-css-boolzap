@@ -144,13 +144,10 @@ var app = new Vue({
         // Function callback to serach from a list of user //
         SearchingUser() {
             // Using filter to filtering the list of user
-            this.contacts.filter(contact => {
-
-
+            this.contacts.forEach(contact => {
 
                 // deafault setting showing all the user //
                 if (this.userSearched == '') {
-                    return
                     contact.visible = true;
                 }
                 // Creation of one variable to avoid mistaken search by computer //
@@ -158,13 +155,16 @@ var app = new Vue({
                 // Testing //
                 console.log(lowTxt);
                 // console.log(highTxt);
-                console.log(name)
+                console.log(contact.name)
                 // Searching process using includes and using the actual object visible valueS //
                 if ( contact.name.toLowerCase().includes(lowTxt)) {
-                    return
                     contact.visible = true;
                 } else {
                     contact.visible = false;
+                }
+                  // deafault setting showing all the user //
+                if (this.userSearched == '') {
+                    contact.visible = true;
                 }
             });
         },
