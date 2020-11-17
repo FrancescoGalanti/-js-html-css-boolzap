@@ -148,12 +148,11 @@ var app = new Vue({
                 // Transformation of an obect of an array in to a variable //
                 const {name} = contact;
 
-
                 // deafault setting showing all the user //
                 if (this.userSearched == '') {
                     contact.visible = true;
                 }
-                // Creation of two variable to avoid mistaken search by computer
+                // Creation of one variable to avoid mistaken search by computer //
                 const lowTxt = this.userSearched.toLowerCase();
                 // Testing //
                 console.log(lowTxt);
