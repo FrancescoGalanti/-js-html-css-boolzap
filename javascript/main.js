@@ -158,7 +158,7 @@ var app = new Vue({
                 const lowTxt = this.userSearched.toLowerCase();
                 const highTxt = this.userSearched.toUpperCase();
                 console.log(lowTxt);
-                console.log(higTxt);
+                console.log(highTxt);
                 console.log(name)
                 // Searching process using includes using the actual object visible valueS //
                 if ( (name.includes(lowTxt)) || (name.includes(highTxt)) ) {
