@@ -149,16 +149,18 @@ var app = new Vue({
                 const {name} = contact;
 
 
-
+                // deafault setting showing all the user //
                 if (this.userSearched == '') {
                     contact.visible = true;
                     return
                 }
+                // Creation of two variable to avoid mistaken search by computer
                 const lowTxt = this.userSearched.toLowerCase();
                 const higTxt = this.userSearched.toUpperCase();
                 console.log(lowTxt);
                 console.log(higTxt);
                 console.log(name)
+                // Searching process using includes //
                 if ( (name.includes(lowTxt)) || (name.includes(higTxt)) ) {
                     contact.visible = true;
                 } else {
