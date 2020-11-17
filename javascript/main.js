@@ -171,7 +171,7 @@ var app = new Vue({
                 // Using filter to filtering the list of user
                 array.filter(contact => {
 
-                // Using a ternary function to determine wich words belongs to the user name //
+                // Using a ternary function to determine wich words belongs to the user name  //
                  contact.name.toLowerCase().includes(lowTxt) ?   contact.visible = true : contact.visible = false;
 
 
