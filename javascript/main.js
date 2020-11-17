@@ -171,19 +171,16 @@ var app = new Vue({
                 // Using filter to filtering the list of user
                 array.filter(contact => {
 
-                // Searching process using includes and using the actual object visible valueS //
-                if ( contact.name.toLowerCase().includes(lowTxt)) {
-                    return contact.visible = true;
-                } else {
-                    return contact.visible = false;
-                }
+                // Using a ternary function to determine wich words belongs to the user name //
+                 contact.name.toLowerCase().includes(lowTxt) ?   contact.visible = true : contact.visible = false;
 
 
-                // deafault setting showing all the user //
-                if (this.userSearched == '') {
-                    contact.visible = true;
-                }
-            });
+             });
+
+               // deafault setting showing all the user //
+               if (this.userSearched == '') {
+                   array.visible = true;
+               }
         },
 
     }
