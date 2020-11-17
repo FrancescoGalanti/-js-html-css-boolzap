@@ -45,7 +45,14 @@ body{
   display: flex;
   padding-right: 15px;
   filter: opacity(.2);
+  transition: opacity .4s;
 }
+
+.list-font:hover{
+  filter: opacity(1);
+}
+
+
 
 .list-icon{
  padding-top: 10px;
@@ -128,7 +135,15 @@ li{
 
 i{
   cursor: pointer;
+  transition: opacity .4s;
 }
+
+i:hover{
+  filter: opacity(1);
+}
+
+
+
 
 p{
   align-items: center;
@@ -291,7 +306,16 @@ i.fas.fa-bell-slash{
   right: 10px;
   color: #ccc;
   font-size: 16px;
+  transition: color .4s;
 }
+
+i.fas.fa-chevron-down:hover{
+  color: black;
+}
+
+
+
+
 
 .container-message:hover  i.fas.fa-chevron-down {
   display: block;
