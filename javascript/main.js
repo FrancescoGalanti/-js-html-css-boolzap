@@ -144,7 +144,7 @@ var app = new Vue({
         // Function callback to serach from a list of user //
         SearchingUser() {
             // Using filter to filtering the list of user
-            this.contacts.forEach(contact => {
+            this.contacts.filter(contact => {
 
                 // deafault setting showing all the user //
                 if (this.userSearched == '') {
