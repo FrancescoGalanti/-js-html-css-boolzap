@@ -86,11 +86,12 @@
 
             <!--in array loop I extrapolated the elements and the index.  then I made a ternary function to determine if lindexe is equal to the control variable am to add the ctive class. I created a click function to change the active class. addes v-show to show only the user that
           macth whith the right name. -->
-            <li v-show="contact.visible == true" v-for="(contact, index) in contacts" class="list-user hoover list-contact" :class="[indexId == index ? 'active' : '']"  @click="Setactivecontact(index)">
+            <li v-show="contact.visible == true" v-for="(contact, index) in  contacts"  class="list-user hoover list-contact" :class="[indexId == index ? 'active' : '']"  @click="Setactivecontact(index)">
               <!--the current image printed on html with the method previously described -->
                <img :src="'./img/avatar'+ contact.avatar +'.jpg'"  alt="" class="img-user">
                <!-- loop of an array of objects to extrapolate contact from contacts (the array) to print the name. -->
                <p class="object-name padding-left-20-lg">{{contact.name}}</p>
+
             </li>
           </ul>
        </section>
@@ -109,12 +110,12 @@
                     <!--the current image printed with dot notation 'the address of the image + reference array [the control variable] + avatar + the format'-->
                   <img class="img-user img-user-content"  :src="'./img/avatar'+ contacts[indexId].avatar +'.jpg'" alt="">
                   <ul class="flex flex-direction-column justify-content-center padding-left-15-lg">
-                    <li class="flex flex-direction-column align-self-center">
+                    <li   class="flex flex-direction-column align-self-center">
                         <!--the printed name that corresponds to the reference array connected to the function described in section four of side with the control variable -->
                        <p>{{contacts[indexId].name}}</p>
                     </li>
                     <li>
-                       <p v-if="" class="style-acess">{{contacts[indexId].date}}</p>
+                       <p class="style-acess">{{contacts[indexId].date}}</p>
                     </li>
                   </ul>
                 </li>
