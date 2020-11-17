@@ -153,7 +153,7 @@ p{
 /* Class managed by a ternary function in Javascript */
 
 li.active{
-  background: grey;
+  background: #80808038;
 }
 
 
@@ -292,7 +292,7 @@ i.fas.fa-bell-slash{
 }
 
 .container-message {
-  width: 400px;
+  width: 300px;
   padding: 10px 20px;
   border-radius: 5px;
   text-align: left;
@@ -321,11 +321,12 @@ i.fas.fa-chevron-down:hover{
   display: block;
 }
 
-.container-message small {
+.small-date {
   color: #ccc;
   display: block;
   text-align: right;
   margin-top: 5px;
+  font-size: 10px;
 }
 
 .sent {
@@ -358,6 +359,18 @@ i.fas.fa-chevron-down:hover{
 }
 
 
+i.far.fa-smile{
+  filter: opacity(.6);
+  transition: opacity .4s;
+}
+
+i.far.fa-smile:hover{
+  filter: opacity(1);
+}
+
+
+
+
 .sidebar-center{
   flex-grow: 1;
   justify-content: center;
@@ -374,6 +387,9 @@ i.fas.fa-chevron-down:hover{
   outline: 0;
 }
 
+
+
+
 .input-footer:hover,
 .input-footer:focus{
   box-shadow: 3px 3px 3px 3px lightblue;
@@ -388,5 +404,14 @@ i.fas.fa-chevron-down:hover{
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+i.fas.fa-microphone{
+  transition: opacity .4s;
   filter: opacity(.5);
+
+}
+
+i.fas.fa-microphone:hover{
+  filter: opacity(1);
 }
