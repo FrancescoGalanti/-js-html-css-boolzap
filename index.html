@@ -74,8 +74,8 @@
              <i class="fas fa-search font-style"></i>
            </li>
            <li class="flex">
-             <!-- which allows you to search our contacts through a function and a dynamic value-->
-             <input class="input-style" type="text" name="" value="" placeholder="search user" v-model="userSearched" @keyup="SearchingUser">
+             <!-- which allows you to search our contacts through a function with one paramets(array itself) and a dynamic value-->
+             <input class="input-style" type="text" name="" value="" placeholder="search user" v-model="userSearched" @keyup="SearchingUser(contacts)">
            </li>
          </ul>
        </section>
@@ -85,7 +85,7 @@
           <ul class="flex flex-direction-column" >
 
             <!--in array loop I extrapolated the elements and the index.  then I made a ternary function to determine if lindexe is equal to the control variable am to add the ctive class. I created a click function to change the active class. addes v-show to show only the user that
-          macth whith the right name. -->
+           macth whith the right name. -->
             <li v-show="contact.visible == true" v-for="(contact, index) in  contacts"  class="list-user hoover list-contact" :class="[indexId == index ? 'active' : '']"  @click="Setactivecontact(index)">
               <!--the current image printed on html with the method previously described -->
                <img :src="'./img/avatar'+ contact.avatar +'.jpg'"  alt="" class="img-user">

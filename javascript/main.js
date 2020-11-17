@@ -152,27 +152,33 @@ var app = new Vue({
 
             }
         },
-        // Function callback to serach from a list of user //
-        SearchingUser() {
-            // Using filter to filtering the list of user
-            this.contacts.filter(contact => {
+        // Function callback to serach from a list of user using the array //
+        SearchingUser(array) {
+                // STARTING SETTING //
 
                 // deafault setting showing all the user //
                 if (this.userSearched == '') {
-                    contact.visible = true;
+                    array.visible = true;
                 }
                 // Creation of one variable to avoid mistaken search by computer //
                 const lowTxt = this.userSearched.toLowerCase();
                 // Testing //
                 console.log(lowTxt);
                 // console.log(highTxt);
-                console.log(contact.name)
+
+                // ENDING SETTING //
+
+                // Using filter to filtering the list of user
+                array.filter(contact => {
+
                 // Searching process using includes and using the actual object visible valueS //
                 if ( contact.name.toLowerCase().includes(lowTxt)) {
-                    contact.visible = true;
+                    return contact.visible = true;
                 } else {
-                    contact.visible = false;
+                    return contact.visible = false;
                 }
+
+
                 // deafault setting showing all the user //
                 if (this.userSearched == '') {
                     contact.visible = true;
