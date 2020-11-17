@@ -155,12 +155,12 @@ var app = new Vue({
                 }
                 // Creation of two variable to avoid mistaken search by computer
                 const lowTxt = this.userSearched.toLowerCase();
-                const highTxt = this.userSearched.toUpperCase();
+                // Testing //
                 console.log(lowTxt);
-                console.log(highTxt);
+                // console.log(highTxt);
                 console.log(name)
-                // Searching process using includes using the actual object visible valueS //
-                if ( (name.includes(lowTxt)) || (name.includes(highTxt)) ) {
+                // Searching process using includes and using the actual object visible valueS //
+                if ( name.toLowerCase().includes(lowTxt)) {
                     contact.visible = true;
                 } else {
                     contact.visible = false;
