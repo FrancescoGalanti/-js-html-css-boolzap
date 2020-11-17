@@ -162,7 +162,7 @@ var app = new Vue({
                 } else {
                     contact.visible = false;
                 }
-                  // deafault setting showing all the user //
+                // deafault setting showing all the user //
                 if (this.userSearched == '') {
                     contact.visible = true;
                 }
