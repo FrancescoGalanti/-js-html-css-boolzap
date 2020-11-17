@@ -262,21 +262,21 @@ i.fas.fa-bell-slash{
 
 /* Beginning of classes managed by a ternary functionin javascriptt */
 
-.row-sent {
+.row-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin: 8px 0;
 }
 
-.row-received {
+.row-left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 8px 0;
 }
 
-.box {
+.container-message {
   width: 400px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -284,20 +284,20 @@ i.fas.fa-bell-slash{
   position: relative;
 }
 
-.box i {
-    display: none;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    color: #ccc;
-    font-size: 16px;
+ i.fas.fa-chevron-down {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #ccc;
+  font-size: 16px;
 }
 
-.box:hover i {
-    display: block;
+.container-message:hover  i.fas.fa-chevron-down {
+  display: block;
 }
 
-.box small {
+.container-message small {
   color: #ccc;
   display: block;
   text-align: right;
