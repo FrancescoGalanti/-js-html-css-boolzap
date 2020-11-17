@@ -287,7 +287,7 @@ i.fas.fa-bell-slash{
   background-image: url(img/mine.jpg);
   background-position: center;
   background-repeat: repeat;
-  padding: 30px 50px;
+  padding: 30px 70px;
   overflow-y: auto;
 }
 
@@ -307,7 +307,7 @@ i.fas.fa-bell-slash{
 }
 
 .container-message {
-  width: 275px;
+  width: 270px;
   padding-left: 10px;
   border-radius: 10px;
   text-align: left;
@@ -316,6 +316,7 @@ i.fas.fa-bell-slash{
   height: 45px;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 5px;
 }
 
  i.fas.fa-chevron-down {
@@ -352,7 +353,7 @@ i.fas.fa-chevron-down:hover{
   font-size: 7px;
   align-self: flex-end;
   padding-right: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 
