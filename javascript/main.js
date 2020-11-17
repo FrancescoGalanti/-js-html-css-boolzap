@@ -121,8 +121,14 @@ var app = new Vue({
                     // Create a new messge.value with previously the function previously described //
                     message: this.newchat.trim(),
                     // assignment of the object value to assign the right class in css //
-                    status: 'sent'
+                    status: 'sent',
+
                 });
+                // refreshing hour //
+                this.contacts.forEach(date =>{
+                  this.contacts[this.indexId].date = dayjs().format('DD/MM/YY HH:mm:ss');
+                });
+
                 // clearing the input //
                 this.newchat = "";
                 // Creation of an autoreply of an asynchronous function call back with emascript 6 //
