@@ -100,7 +100,7 @@ var app = new Vue({
         // String managed by input-footer //
         newchat: "",
         // String managed by input notification //
-        userSearched: "",
+        userSearched: '',
     },
     // methods
     methods: {
@@ -141,5 +141,31 @@ var app = new Vue({
 
             }
         },
+        // Function callback to serach from a list of user //
+        SearchingUser() {
+            // Using filter to filtering the list of user
+            this.contacts.filter(contact => {
+                // Transformation of an obect of an array in to a variable //
+                const {name} = contact;
+
+
+
+                if (this.userSearched == '') {
+                    contact.visible = true;
+                    return
+                }
+                const lowTxt = this.userSearched.toLowerCase();
+                const higTxt = this.userSearched.toUpperCase();
+                console.log(lowTxt);
+                console.log(higTxt);
+                console.log(name)
+                if ( (name.includes(lowTxt)) || (name.includes(higTxt)) ) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
+        },
+
     }
 });
