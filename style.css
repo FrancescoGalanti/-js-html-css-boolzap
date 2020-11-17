@@ -37,7 +37,14 @@ body{
 
 .list-user{
   display: flex;
-  padding: 10px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.list-contact{
+ padding-left: 20px;
+ padding-top: 5px;
+ padding-bottom: 5px;
 }
 
 .list-font{
@@ -64,7 +71,7 @@ body{
 /* LAYOUT-IMG */
 
 .img-user {
-  width: 12%;
+  width: 10%;
   border-radius: 50%;
   align-self: center;
 }
@@ -85,12 +92,14 @@ body{
   flex-direction: column;
 }
 
-.padding-left-30{
-  padding-left: 30px;
+
+
+.padding-left-20-lg{
+  padding-left: 20px;
 }
 
-.padding-left-20{
-  padding-left: 20px;
+.padding-left-15-lg{
+  padding-left: 15px;
 }
 
 .justify-content-center{
@@ -109,7 +118,7 @@ body{
 /* hoover */
 
 .hoover:hover{
-  background-color: grey;
+  background-color: #80808038;
 }
 
 
@@ -198,6 +207,12 @@ li.active{
   background-color:  #00bcd49e;
 }
 
+.input-search{
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+
 .User-contact{
   flex-grow: 1;
   display: flex;
@@ -230,11 +245,12 @@ i.fas.fa-bell-slash{
 .input-style{
   border: 0;
   filter: opacity(.5);
-  width: 330px;
+  width: 345px;
   padding: 10px;
   outline: 0;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-top: 10px;
+  height: 20px;
 }
 
 .input-style:hover,
@@ -292,11 +308,11 @@ i.fas.fa-bell-slash{
 .container-message {
   width: 300px;
   padding-left: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: left;
   position: relative;
   display: flex;
-  height: 40px;
+  height: 45px;
   align-items: center;
   justify-content: space-between;
 }
@@ -395,6 +411,8 @@ i.far.fa-smile:hover{
   border: none;
   padding-left: 10px;
   outline: 0;
+  filter: opacity(0.5);
+
 }
 
 
