@@ -123,19 +123,21 @@ var app = new Vue({
                 });
                 // clearing the input //
                 this.newchat = "";
-                // Creation of creation of an asynchronous function that already existing //
-                setInterval(this.Answback(), 3000);
-              };
-         },
-         Answback() {
-           // array mached with the control variable to push the newchat in the esact contact.name and messages//
-           this.contacts[this.indexId].messages.push({
-              // Format date made by Data,js //
-               date: dayjs().format('DD/MM/YY HH:mm:ss'),
-               // Create a new messge.value with previously the function previously described //
-               message: 'Viva la mona!',
-              // assignment of the object value to assign the right class in css //
-               status: 'received'});
-       }
+                // Creation of an autoreply of an asynchronous function call back with emascript 6 //
+                setTimeout(() =>{
+                  // array mached with the control variable to push the newchat in the esact contact.name and messages//
+                  this.contacts[this.indexId].messages.push({
+                     // Format date made by Data,js //
+                      date: dayjs().format('DD/MM/YY HH:mm:ss'),
+                      // Create a new messge.value with previously the function previously described //
+                      message: 'Viva la mona!',
+                     // assignment of the object value to assign the right class in css //
+                      status: 'received'
+                    });
+
+                }, 3000);
+
+            }
+        },
     }
 });
