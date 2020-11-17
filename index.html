@@ -74,8 +74,8 @@
              <i class="fas fa-search font-style"></i>
            </li>
            <li class="flex">
-             <!-- Input value managed by vue -->
-             <input class="input-style" type="text" name="" value="" placeholder="search user">
+             <!-- which allows you to search our contacts through a function and a dynamic value-->
+             <input class="input-style" type="text" name="" value="" placeholder="search user" v-model="userSearched" @keyup.enter="SearchingUser">
            </li>
          </ul>
        </section>

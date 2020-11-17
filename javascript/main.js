@@ -97,8 +97,10 @@ var app = new Vue({
         ],
         // control variable //
         indexId: "0",
-
+        // String managed by input-footer //
         newchat: "",
+        // String managed by input notification //
+        userSearched: "",
     },
     // methods
     methods: {
