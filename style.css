@@ -479,7 +479,7 @@ i.fas.fa-microphone:hover{
     font-size: 10px;
   }
 
-  /* reset with messages */
+  /* reset widthmessages */
 
   .width-reset-message-1251px{
     width: 200px;
@@ -487,6 +487,7 @@ i.fas.fa-microphone:hover{
 }
 
 @media only screen and (max-width: 1151px) {
+  /* rest padding */
   .padding-reset-1151px-large{
     padding: 30px 10px;
   }
